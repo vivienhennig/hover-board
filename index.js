@@ -4,27 +4,27 @@ const container = document.getElementById(containerID);
 const colorContainer = document.getElementById(colorContainerID);
 
 const colors = ['#F94144', '#F3722C', '#F8961E', '#F9844A', '#F9C74F', '#90BE6D', '#43AA8B', '#4D908E', '#577590', '#277DA1' ];
-const colorsNeon = ['#01ffc3', '#01ffff', '#ffb3fd', '#9d72ff'];
 const colorsBright = ['#EF476F', '#F78C6B', '#FFD166', '#06D6A0', '#118AB2', '#073B4C'];
+const colorsNeon = ['#01ffc3', '#01ffff', '#ffb3fd', '#9d72ff'];
 
-const NUM_OF_SQUARES = 1500;
+const NUM_OF_SQUARES = 1224;
 
 let colorsIDIndex = 0;
 let usedColors = colors;
-
-addColorPicker();
 
 
 for (let i = 1; i <= NUM_OF_SQUARES; i++) {
   let square = document.createElement('div');
   square.classList.add('square');
-
+  
   square.addEventListener('mouseenter', () => addColor(square));
-
+  
   square.addEventListener('mouseleave', () => removeColor(square));
-
+  
   container.appendChild(square);
 }
+
+addColorPicker();
 
 function addColor(square) {
   const backgroundColor = getRandomColor(colorsNeon);
@@ -46,7 +46,7 @@ function displayColors(colors) {
   const id = `colors${colorsIDIndex}`;
   colorRow.classList.add('colorRow');
   colorRow.id = id;
-
+  
   colorRow.addEventListener('click', (event) => {
     console.log(event.target);
     if (event.target.id === id || event.target.parentNode.id === id) {
@@ -54,11 +54,11 @@ function displayColors(colors) {
       console.log(colors);
     }
   });
-
+  
   for (let i = 0; i < colors.length; i++) {
     let colorDiv = document.createElement('div');
     colorDiv.classList.add('color');
-
+    
     colorDiv.style.backgroundColor = colors[i];
     console.log(colors[i], colorDiv)
     
@@ -70,6 +70,6 @@ function displayColors(colors) {
 
 function addColorPicker() {
   displayColors(colors);
-  displayColors(colorsNeon);
   displayColors(colorsBright);
+  displayColors(colorsNeon);
 }
