@@ -11,8 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #2d2d2d;
-  height: 100vh;
+  max-height: 100vh;
+  background-color: #040405;
 }
 
 #container {
@@ -21,7 +21,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   width: 50%;
-  height: 100%;
+  max-height: 100vh;
+  padding: 16px;
 }
 
 #colorContainer, #optionsContainer {
