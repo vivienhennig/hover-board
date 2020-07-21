@@ -7,7 +7,7 @@ const colors = ['#F94144', '#F3722C', '#F8961E', '#F9844A', '#F9C74F', '#90BE6D'
 const colorsBright = ['#EF476F', '#F78C6B', '#FFD166', '#06D6A0', '#118AB2', '#073B4C'];
 const colorsNeon = ['#01ffc3', '#01ffff', '#ffb3fd', '#9d72ff'];
 
-const NUM_OF_SQUARES = 1224;
+const NUM_OF_SQUARES = 3000;
 
 let colorsIDIndex = 0;
 let usedColors = colors;
